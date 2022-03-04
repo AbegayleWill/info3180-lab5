@@ -50,7 +50,7 @@ def login():
             # get user id, load into session
                 login_user(user)
             # remember to flash a message to the user
-            flash("you have successfully logged in",'success')
+            flash("Logged in successfully",'success')
             return redirect(url_for("secure_page"))  # they should be redirected to a secure-page route instead
     return render_template("login.html", form=form)
 
