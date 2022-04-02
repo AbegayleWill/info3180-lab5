@@ -54,7 +54,7 @@ def login():
             user = UserProfile.query.filter_by(username=username).first()
             # and password submitted. Remember you need to compare the password hash.
             # You will need to import the appropriate function to do so.
-            if username is not None and check_password_hash(user.password,password):
+            if user is not None and check_password_hash(user.password,password):
             # Then store the result of that query to a `user` variable so it can be
             # passed to the login_user() method below.
             # get user id, load into session
